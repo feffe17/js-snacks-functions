@@ -10,9 +10,14 @@ const name = 'Mario';
 
 // Dichiara la funzione qui.
 
+function salutoOrario(string){
+    const orario = new Date().getHours();
+    console.log(orario);
+    
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+salutoOrario(name);
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
