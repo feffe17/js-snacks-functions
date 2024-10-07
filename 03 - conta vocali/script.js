@@ -7,16 +7,33 @@ const word = 'javascript';
 
 function contaVocali(string) {
     const vocali = ["a" , "e" , "i" , "o" , "u"];
+    let conteggio = 0;
     string.split("");
-    for (let i = 0; i < vocali.length; i++) {
-        
-        console.log( string);
-        
+    for (let i = 0; i < string.length; i++) {
+        if (vocali.includes(string[i].toLowerCase())){
+            conteggio++;
+        }    
     }
+    console.log(conteggio);
+    return conteggio;
+}
+
+const contaVocaliArrow = (string) => {
+    const vocali = ["a" , "e" , "i" , "o" , "u"];
+    let conteggio = 0;
+    string.split("");
+    for (let i = 0; i < string.length; i++) {
+        if (vocali.includes(string[i].toLowerCase())){
+            conteggio++;
+        }    
+    }
+    console.log(conteggio);
+    return conteggio;
 }
 
 // Invoca la funzione qui e stampa il risultato in console
 
 contaVocali(word);
+contaVocaliArrow(word);
 
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
