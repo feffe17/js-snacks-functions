@@ -13,11 +13,46 @@ const name = 'Mario';
 function salutoOrario(string){
     const orario = new Date().getHours();
     console.log(orario);
-    
+
+    switch (true) {
+        case (orario >= 5 && orario < 12):
+            console.log(`Buongiorno ${string} sono le ` + Date());
+            break;    
+        case (orario >= 12 && orario < 18):
+            console.log(`Buon pomeriggio ${string} sono le ` + Date());
+            break; 
+        case (orario >= 18 && orario < 22):
+            console.log(`Buonasera ${string} sono le ` + Date()); 
+            break; 
+        default:
+            console.log(`Buona notte ${string} sono le ` + Date()); 
+            break; 
+    }    
+}
+
+const salutoOrarioArrow = (string) => {
+    const orario = new Date().getHours();
+    console.log(orario);
+
+    switch (true) {
+        case (orario >= 5 && orario < 12):
+            console.log(`Buongiorno ${string} sono le ` + Date());
+            break;    
+        case (orario >= 12 && orario < 18):
+            console.log(`Buon pomeriggio ${string} sono le ` + Date());
+            break; 
+        case (orario >= 18 && orario < 22):
+            console.log(`Buonasera ${string} sono le ` + Date()); 
+            break; 
+        default:
+            console.log(`Buona notte ${string} sono le ` + Date()); 
+            break; 
+    }    
 }
 
 // Invoca la funzione qui e stampa il risultato in console
 
 salutoOrario(name);
+salutoOrarioArrow("federico");
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
